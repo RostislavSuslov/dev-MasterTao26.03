@@ -2,6 +2,7 @@
     .template-title {
         padding-bottom: 52px;
     }
+
     .container {
         position: relative;
     }
@@ -63,7 +64,7 @@ input {
     padding: 18px 20px;
     border: none;
     transition: .3s;
-
+    color: #282B38;
 
 
     &:focus-visible {
@@ -151,6 +152,49 @@ input[type='checkbox']+label:before {
 input[type='checkbox']:checked+label:before {
     content: "";
     background: url(./assets/img/icon-checked.svg) center no-repeat #fff;
+}
+
+.nice-select {
+    color: #282B38;
+    height: 55px;
+    font-size: 15px;
+    border-radius: 10px;
+    line-height: 52px; 
+    .list {
+        margin-bottom: 0;
+    }
+}
+
+.nice-select-dropdown {
+    width: 100%;
+}
+
+
+.nice-select .option:hover,
+.nice-select .option.focus,
+.nice-select .option.selected.focus {
+    background-color: #89C249;
+}
+
+.nice-select:after {
+    border-bottom: none;
+    border-right: none;
+    height: 15px;
+    right: 15px;
+    width: 15px;
+    transform: rotate(0);
+    background: url(./assets/img/icon-arrow-bottom.svg) center -2px / 15px no-repeat;
+    margin-top: -9px;
+}
+
+.nice-select.open:after {
+    transform: rotate(-180deg);
+    margin-top: -14px;
+    right: 20px;
+}
+
+select {
+    display: none;
 }
 
 .file-name {
