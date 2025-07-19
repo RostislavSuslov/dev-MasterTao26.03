@@ -32,11 +32,38 @@ inputCheckbox.forEach(item => {
     item.closest('.input-box').classList.add('input-box_checkbox')
 })
 
+const fileInput = document.querySelectorAll('[type="file"]');
+
+fileInput.forEach(item => {
+    item.addEventListener('change', function() {
+        let fileName = item.closest('.input-box').querySelector('.file-name')
+        fileName.innerHTML = item.files[0].name;
+    })
+})
 
 
-const fileInput = document.querySelector('#calculation-file');
-const fileName = document.querySelector('#file-name')
+// const advantagesSlideLength = document.querySelectorAll('.advantages .swiper-slide').length
 
-fileInput.addEventListener('change', () => {
-   fileName.innerHTML = fileInput.files[0].name;
-});
+// const swiperAdvantages = new Swiper('#advantages', {
+//     spaceBetween: 12,
+//     loop: true,
+//     simulateTouch: true,
+//     slidesPerView: 1,
+//     pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true,
+//         enabled: true,
+//     },
+//     breakpoints: {
+//         1025: {
+//             spaceBetween: 0,
+//             loop: false,
+//             slidesPerGroup: advantagesSlideLength,
+//             simulateTouch: false,
+//             pagination: {
+//                 enabled: false,
+//                 el: '.swiper-pagination',
+//             }
+//         }
+//     }
+// });
