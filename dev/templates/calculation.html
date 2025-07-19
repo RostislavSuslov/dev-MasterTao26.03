@@ -1,19 +1,62 @@
-<section class="calculation">
+<section id="calculation" class="calculation">
     <div class="container">
-        <form>
-            <input type="date">
-            <input type="url">
-            <select>
-                <option>Пункт 1</option>
-                <option>Пункт 2</option>
-                <option>Пункт 3</option>
-                <option>Пункт 4</option>
-            </select>
-            <textarea></textarea>
-            <button type="button">button</button>
-            <button type="submit">submit</button>
-            <button type="reset">reset</button>
+        <div class="template-title template-title_case-3">
+            <h2>Получить рассчет стоимости доставки вашего груза</h2>
+
+        </div>
+        <form class="calculation-form">
+            <div class="form-row">
+                <div class="form-column">
+                    <div class="input-box">
+                        <label for="product-category">Категория товара:</label>
+                        <select id="product-category">
+                            <option value="1">Важкий</option>
+                            <option value="2">Середній</option>
+                            <option value="3">Легкий</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label for="cargo-weight">Вес груза (кг):</label>
+                        <input id="cargo-weight" type="number" placeholder="Введите вес" inputmode="numeric">
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="input-box">
+                        <label for="cargo-cost">Стоимость груза:</label>
+                        <input id="cargo-cost" type="number" placeholder="Введите стоимость" inputmode="numeric">
+                    </div>
+                    <div class="input-box">
+                        <label for="cargo-volume">Объем груза (м3)::</label>
+                        <input id="cargo-volume" type="number" placeholder="Введите объем" inputmode="numeric">
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="input-box">
+                        <input id="insurance" type="checkbox">
+                        <label for="insurance">Страховка</label>
+                    </div>
+                    <div class="input-box">
+                        <input id="customs-clearance" type="checkbox">
+                        <label for="customs-clearance">Таможенное оформление</label>
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="input-box">
+                        <label for="HS-code">Код ТН ВЭД:</label>
+                        <input id="HS-code" type="text" placeholder="Введите код" inputmode="text">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-box">
+                    <div class="file-name"></div>
+                    <input id="calculation-file" type="file">
+                    <label for="calculation-file">Загрузить фото товара</label>
+                </div>
+            </div>
+            <a href="#" class="btn btn-lg btn-primary">Следующий шаг <img src="./assets/img/icon-arrow-left.svg" alt="arrow"></a>
         </form>
+        <img src="./assets/img/calculation-person.png" class="calculation-img" alt="person">
     </div>
 </section>
 
