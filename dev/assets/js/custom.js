@@ -73,3 +73,59 @@ fileInput.forEach(item => {
 //         }
 //     }
 // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const numberArr = [1, 2, 3, 4, 5, 6, 7, 8, 100, 101, 102, 103]
+// console.log(numberArr);
+
+// numberArr.forEach((item, index) => {
+//     console.log(item + index)
+// })
+
+
+// function Calc(qwerty, y) {
+//     console.log(qwerty + y);
+// }
+
+// // Calc(7, 3)
+
+// const Message = ()=> {
+//     console.log('showText showText showText showText showText');
+// }
+
+ 
+
+
+
+
+/*
+1. Strig
+2. Number
+3. null
+4. NaN - Not a number
+
+*/
