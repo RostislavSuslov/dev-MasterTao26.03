@@ -51,19 +51,20 @@ const swiperAdvantages = new Swiper('#advantages', {
     spaceBetween: 12,
     loop: true,
     simulateTouch: true,
-    slidesPerView: 1, 
+    slidesPerView: 1,
+    roundLengths: true,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
         enabled: true,
     },
     breakpoints: {
-        1025: {
+        992: {
             spaceBetween: 0,
-            slidesPerView: advantagesSlideLength, 
+            slidesPerView: 'auto',
             slidesPerGroup: advantagesSlideLength,
-            loop: false, /*!!!*/
-            simulateTouch: false, /*!!!*/
+            loop: false,
+            simulateTouch: false,
             pagination: {
                 enabled: false,
                 el: '.swiper-pagination',
@@ -99,5 +100,5 @@ const swiperAdvantages = new Swiper('#advantages', {
 2. Number
 3. null
 4. NaN - Not a number
-
+5. boolian - true | false
 */
