@@ -1,6 +1,6 @@
 ///fonts///
 $font-primary: "Open Sans";
-$font-secondary:  "monospace";
+$font-secondary: "monospace";
 $font-size: 16px;
 
 ///colors///
@@ -12,14 +12,23 @@ $color: #fff;
 $test-color: red;
 
 $section-margin: 100px;
-$section-margin-mobile: 61px;
+$section-margin-mobile: 60px;
 
 
 
-// @mixin bg-accent {
+@mixin title-line {
+    content: "";
+    position: absolute;
+    width: 85px;
+    height: 2px;
+    background-color: $primary-color;
+    bottom: 54px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-// }
-
-// nav ul {
-//   @include bg-accent;
-// }
+@mixin flex-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
