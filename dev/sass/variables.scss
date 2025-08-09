@@ -8,7 +8,7 @@ $primary-color: #E58D35;
 $secondary-color: #89C249;
 $bg-color: #282B38;
 $bg-color-accent: #363A4D;
-$color: #fff;
+$color: #ffffff;
 $test-color: red;
 
 $section-margin: 100px;
@@ -25,6 +25,21 @@ $section-margin-mobile: 60px;
     bottom: 54px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+@mixin swiper-arrow-container {
+    --padding: 20px;
+    height: 0;
+    position: absolute;
+    top: calc(50% - 23px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: calc(1503px + var(--padding) * 2);
+    padding: 0 var(--padding);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
 }
 
 @mixin flex-centered {

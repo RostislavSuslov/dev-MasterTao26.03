@@ -1,4 +1,4 @@
-@use '../variables'as variables;
+@use '../variables' as variables;
 
 @media screen and (max-width: 991.98px) {
     section {
@@ -38,7 +38,7 @@
     }
 
     .nav-link {
-        color: #fff;
+        color: #ffffff;
         font-size: 24px;
         line-height: 222%;
     }

@@ -50,6 +50,7 @@ const swiperAdvantages = new Swiper('#advantages', {
     simulateTouch: true,
     slidesPerView: 1,
     roundLengths: true,
+
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -70,11 +71,40 @@ const swiperAdvantages = new Swiper('#advantages', {
     }
 });
 
+document.querySelectorAll('.template-carousel').forEach((carouselEl, index) => {
+    const swiper = new Swiper(carouselEl.querySelector('.swiper'), {
+        slidesPerView: 1,
+        direction: 'horizontal',
+        loop: true,
+        spaceBetween: 30,
 
-/*
-1. Strig
-2. Number
-3. null
-4. NaN - Not a number
-5. boolian - true | false
-*/
+        navigation: {
+            nextEl: carouselEl.querySelector('.swiper-button-next'),
+            prevEl: carouselEl.querySelector('.swiper-button-prev'),
+        },
+
+        pagination: {
+            el: carouselEl.querySelector('.swiper-pagination'),
+            clickable: true,
+        },
+
+        breakpoints: {
+            830: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                pagination: {
+                    enabled: false,
+                    el: carouselEl.querySelector('.swiper-pagination'),
+                }
+            },
+            1400: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    enabled: false,
+                    el: carouselEl.querySelector('.swiper-pagination'),
+                }
+            }
+        }
+    });
+});

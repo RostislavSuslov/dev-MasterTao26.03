@@ -1,4 +1,4 @@
-@use 'variables'as variables;
+@use 'variables' as variables;
 
 .swiper-banner {
     max-width: 1820px;
@@ -16,24 +16,11 @@
         }
     }
 
-    .swiper-banner-arrow {
-        --padding: 20px;
-        height: 0;
-        position: absolute;
-        top: calc(50% - 23px);
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        max-width: calc(1503px + var(--padding) * 2);
-        padding: 0 var(--padding);
-        z-index: 1;
-        display: flex;
-        justify-content: space-between;
-    }
+   
 
     .swiper-button-next,
     .swiper-button-prev {
-        color: #fff;
+        color: #ffff;
         position: static;
         margin-top: 0;
 
@@ -46,6 +33,10 @@
     .swiper-pagination-bullets.swiper-pagination-horizontal {
         top: calc(100% - 59px);
     }
+}
+
+.swiper-banner-arrow {
+    @include variables.swiper-arrow-container;
 }
 
 .banner-title {
@@ -64,24 +55,4 @@
     max-width: 340px;
     margin-bottom: 37px;
     line-height: 1.35;
-}
-
-
-
-.swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    border: 2px solid #fff;
-    background-color: transparent;
-    opacity: 1;
-    cursor: pointer;
-
-    &-active {
-        background-color: #fff;
-    }
-}
-
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 13px);
 }
